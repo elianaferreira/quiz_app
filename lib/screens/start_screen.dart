@@ -4,7 +4,9 @@ import 'package:quiz_app/constants/dimens.dart';
 import 'package:quiz_app/constants/quiz_colors.dart';
 
 class StartScreen extends StatelessWidget {
-  const StartScreen({super.key});
+  const StartScreen(this.startQuizAction, {super.key});
+
+  final void Function() startQuizAction;
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +32,9 @@ class StartScreen extends StatelessWidget {
           Button(
             "Start Quiz",
             const Icon(Icons.arrow_right_alt),
-            () => print("Start Quiz!!!!"),
+            () {
+              startQuizAction();
+            },
           )
         ],
       ),

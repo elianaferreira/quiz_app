@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:quiz_app/constants/dimens.dart';
 import 'package:quiz_app/constants/quiz_colors.dart';
 
-class CuestionsScreen extends StatefulWidget {
-  const CuestionsScreen({super.key});
+class QuestionsScreen extends StatefulWidget {
+  const QuestionsScreen({super.key});
 
   @override
-  State<CuestionsScreen> createState() {
-    return _CuestionsScreenState();
+  State<QuestionsScreen> createState() {
+    return _QuestionsScreenState();
   }
 }
 
-class _CuestionsScreenState extends State<CuestionsScreen> {
+class _QuestionsScreenState extends State<QuestionsScreen> {
   @override
   Widget build(BuildContext context) {
     return const Center(
