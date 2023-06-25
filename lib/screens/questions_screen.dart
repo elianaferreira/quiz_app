@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_app/components/rounded_button.dart';
 import 'package:quiz_app/constants/dimens.dart';
 import 'package:quiz_app/constants/quiz_colors.dart';
 
@@ -14,17 +15,23 @@ class QuestionsScreen extends StatefulWidget {
 class _QuestionsScreenState extends State<QuestionsScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Center(
+    return SizedBox(
       child: Column(
-        mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(
+          const Text(
             "What are the main building block of Flutter's UI",
             style: TextStyle(
                 color: Color(QuizColors.onPrimaryColor),
-                fontSize: Dimens.title),
+                fontSize: Dimens.subtitle),
             textAlign: TextAlign.center,
-          )
+          ),
+          const SizedBox(
+            height: Dimens.paddingXXL,
+          ),
+          RoundedButton("Answer1", () {}),
+          RoundedButton("Answer1", () {}),
+          RoundedButton("Answer1", () {}),
         ],
       ),
     );
