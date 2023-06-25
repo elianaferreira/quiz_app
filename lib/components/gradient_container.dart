@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_app/constants/dimens.dart';
 import 'package:quiz_app/constants/quiz_colors.dart';
 
 class GradientContainer extends StatelessWidget {
@@ -9,6 +10,7 @@ class GradientContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: const EdgeInsets.all(Dimens.padding),
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height,
       decoration: const BoxDecoration(
