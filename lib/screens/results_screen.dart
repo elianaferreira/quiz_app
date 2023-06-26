@@ -27,20 +27,27 @@ class ResultsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final summaryData = getSummaryData();
+    final numTotal = questions.length;
+    final numCorrectQuestions = summaryData
+        .where((summary) => summary['correct_answer'] == summary['user_answer'])
+        .length;
+
     return Column(
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         const SizedBox(height: Dimens.paddingXXXL),
         Text(
-          'Result',
+          'You answered $numCorrectQuestions out of $numTotal questions correctly!',
           style: GoogleFonts.lato(
               color: const Color(QuizColors.onPrimaryColor),
               fontSize: Dimens.subtitle,
               fontWeight: FontWeight.bold),
+          textAlign: TextAlign.center,
         ),
         const SizedBox(height: Dimens.paddingXXL),
-        QuestionSummary(getSummaryData()),
+        QuestionSummary(summaryData),
         Button('Retry', const Icon(Icons.autorenew), () {})
       ],
     );
