@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:quiz_app/components/rounded_button.dart';
 import 'package:quiz_app/constants/dimens.dart';
 import 'package:quiz_app/constants/quiz_colors.dart';
@@ -33,9 +34,10 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
         children: [
           Text(
             currentQuestions.text,
-            style: const TextStyle(
-                color: Color(QuizColors.onPrimaryColor),
-                fontSize: Dimens.subtitle),
+            style: GoogleFonts.lato(
+                color: const Color(QuizColors.primaryLightColor),
+                fontSize: Dimens.subtitle,
+                fontWeight: FontWeight.bold),
             textAlign: TextAlign.center,
           ),
           const SizedBox(

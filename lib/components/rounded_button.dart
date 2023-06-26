@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:quiz_app/constants/dimens.dart';
 import 'package:quiz_app/constants/quiz_colors.dart';
 
@@ -26,7 +27,7 @@ class RoundedButton extends StatelessWidget {
         ),
         child: Text(
           label,
-          style: const TextStyle(
+          style: GoogleFonts.lato(
             fontSize: Dimens.answerButtonText,
           ),
         ),

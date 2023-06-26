@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:quiz_app/constants/dimens.dart';
 import 'package:quiz_app/constants/quiz_colors.dart';
 
@@ -18,7 +19,7 @@ class Button extends StatelessWidget {
           backgroundColor: const Color(QuizColors.primaryColor)),
       icon: icon,
       label: Text(label,
-          style: const TextStyle(
+          style: GoogleFonts.lato(
             fontSize: Dimens.buttonText,
           )),
     );
