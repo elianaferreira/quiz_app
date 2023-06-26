@@ -7,9 +7,11 @@ class Dimens {
   //text sizes
   static const double title = 24;
   static const double subtitle = 20;
+  static const double itemHeader = 18;
   static const double buttonText = 20;
   static const double answerButtonText = 14;
 
   //miscellaneous
   static const double corderRadius = 24;
+  static const double circleSize = 30;
 }
