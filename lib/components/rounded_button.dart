@@ -10,20 +10,25 @@ class RoundedButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: onPressAction,
-      style: ElevatedButton.styleFrom(
+    return Padding(
+      padding: const EdgeInsets.symmetric(
+          vertical: Dimens.padding, horizontal: Dimens.paddingXXL),
+      child: ElevatedButton(
+        onPressed: onPressAction,
+        style: ElevatedButton.styleFrom(
           padding: const EdgeInsets.symmetric(
               vertical: Dimens.padding, horizontal: Dimens.paddingXXL),
           foregroundColor: const Color(QuizColors.onPrimaryColor),
           backgroundColor: const Color(QuizColors.accent),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(Dimens.corderRadius),
-          )),
-      child: Text(
-        label,
-        style: const TextStyle(
-          fontSize: Dimens.answerButtonText,
+          ),
+        ),
+        child: Text(
+          label,
+          style: const TextStyle(
+            fontSize: Dimens.answerButtonText,
+          ),
         ),
       ),
     );
